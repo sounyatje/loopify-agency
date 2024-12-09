@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Assurez-vous d'importer axios
-import logo from '../../../public/logorounded.png';
+import logo from '../../../public/logo.png';
 import backgroundImage from '../../../public/backgroundimage.webp'; // Assurez-vous de bien utiliser le chemin correct
 
 const MaintenancePage = () => {
@@ -47,7 +47,7 @@ const MaintenancePage = () => {
       <div className="relative text-center p-10 bg-blue-950 rounded-lg">
         {/* Illustration */}
         <div className="flex justify-center items-center h-40">
-          <img src={logo} alt="Logo" className="w-40 h-auto" />
+          <img src={logo} alt="Logo" className="w-40 h-auto mb-8" />
         </div>
 
         {/* Main Title */}
@@ -56,7 +56,7 @@ const MaintenancePage = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-white max-w-md ">
+        <p className="text-white max-w-md mb-2 ">
           Our website is currently under maintenance. We’re working hard to deliver the best experience possible.
         </p>
 
