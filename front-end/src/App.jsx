@@ -8,10 +8,10 @@ import './styles.css';
 const App = () => {
   return (
     <>
-    <MaintenancePage/>
-    {/* <Navbar/>
+    {/* <MaintenancePage/> */}
+     <Navbar/>
        <Header/>
-      <Footer /> */}
+      <Footer /> 
     </>
   );
 };
