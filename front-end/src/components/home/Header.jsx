@@ -18,7 +18,7 @@ export default function Hero() {
   />
 </div>
 
-        <div className=" mb-14 max-w-2xl py-32 sm:py-48 lg:py-56 bg-red-700">
+        <div className="mb-14 max-w-2xl py-32 sm:py-48 lg:py-56 bg-red-700">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Announcing our next round of funding.{' '}
@@ -49,6 +49,7 @@ export default function Hero() {
             </div>
           </div>
         </div> 
+        
         <div
   aria-hidden="true"
   className="absolute inset-x-0 -top-40 z-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
