@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Assurez-vous d'importer axios
-import logo from '../../../public/logo.png';
+import logo from '../../../public/logo (2).png';
 import backgroundImage from '../../../public/backgroundimage.webp'; // Assurez-vous de bien utiliser le chemin correct
 
 const MaintenancePage = () => {
@@ -46,8 +46,8 @@ const MaintenancePage = () => {
       {/* Contenu principal sans opacité */}
       <div className="relative text-center p-10 bg-blue-950 rounded-lg">
         {/* Illustration */}
-        <div className="flex justify-center items-center h-40">
-          <img src={logo} alt="Logo" className="w-40 h-auto mb-8" />
+        <div className="flex justify-center items-center h-20">
+          <img src={logo} alt="Logo" className="w-40 h-auto" />
         </div>
 
         {/* Main Title */}
@@ -75,7 +75,7 @@ const MaintenancePage = () => {
             />
             <button
               type="submit"
-              className="bg-orange-500 text-white px-4 py-2 rounded-r-md hover:bg-orange-600"
+              className="bg-orange text-white px-4 py-2 rounded-r-md hover:bg-orange-600"
             >
               Notify Me
             </button>

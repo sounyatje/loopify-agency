@@ -44,15 +44,15 @@ export default function Example() {
             <span className="sr-only">Loopify Agency</span>
             <img
               alt="Logo Loopify"
-              src="../../../public/logo.png"
-              className="h-8 w-auto"
+              src="/logo_resize.png"  // Chemin modifié ici
+              className="h-10 w-auto"
             />
           </a>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMobileMenuOpen(true)}  // Ouverture du menu mobile
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange"
           >
             <span className="sr-only">Open main menu</span>
@@ -66,7 +66,9 @@ export default function Example() {
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
 
-            <PopoverPanel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+            <PopoverPanel 
+              className="absolute -left-8 top-full z-50 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+            >
               <div className="p-4">
                 {services.map((item) => (
                   <div
@@ -111,9 +113,9 @@ export default function Example() {
             Contact
           </a>
         </PopoverGroup>
-      
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+
+      <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -121,13 +123,13 @@ export default function Example() {
               <span className="sr-only">Loopify Agency</span>
               <img
                 alt="Logo Loopify"
-                src="../../../public/logo.png"
+                src="/logo.png"  // Chemin modifié ici
                 className="h-8 w-auto"
               />
             </a>
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => setMobileMenuOpen(false)}  // Fermeture du menu mobile
               className="-m-2.5 rounded-md p-2.5 text-orange"
             >
               <span className="sr-only">Close menu</span>
