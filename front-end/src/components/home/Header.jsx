@@ -1,74 +1,41 @@
 import React from 'react';
 
-export default function Hero() {
-
+export default function HeroContent() {
   return (
-    <div className="bg-white">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div
-  aria-hidden="true"
-  className="absolute inset-x-0 -top-40 z-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
->
-  <div
-    style={{
-      clipPath:
-        'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-    }}
-    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-  />
-</div>
-< div className="flex gap-6">
-        <div className="mb-14 max-w-2xl py-32 sm:py-48 lg:py-56 bg-red-700">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{' '}
-              <a href="#" className="font-semibold text-indigo-600">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-          <div className="text-center">
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-              Data to enrich your online business
-            </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get started
-              </a>
-              <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div> 
-        <div className="flex-1 mb-14 py-32 sm:py-48 lg:py-56  bg-red-700">
-            {/* Ce div est vide et ajustable */}
-          </div>
+    <div className="bg-white flex items-center justify-center" style={{ height: '95vh' }}>
+      {/* Conteneur principal avec padding de 20px partout */}
+      <div className="flex flex-col lg:flex-row w-full h-full gap-8 p-[20px]">
         
-
+        {/* Section gauche - 1/3 de la largeur */}
+        <div className="lg:w-1/3 bg-red-700 flex flex-col justify-center items-center p-6 sm:p-8 rounded-lg shadow-md">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 text-center lg:text-left">
+            Data to enrich your online business
+          </h1>
+          <p className="text-sm sm:text-lg text-gray-200 mb-6 leading-relaxed text-center lg:text-left">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. 
+            Elit sunt amet fugiat veniam occaecat.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="#"
+              className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2 rounded-md w-full sm:w-auto text-center transition"
+            >
+              Get started
+            </a>
+            <a
+              href="#"
+              className="text-white font-semibold hover:underline text-center w-full sm:w-auto"
+            >
+              Learn more →
+            </a>
+          </div>
         </div>
-        <div
-  aria-hidden="true"
-  className="absolute inset-x-0 -top-40 z-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
->
-  <div
-    style={{
-      clipPath:
-        'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-    }}
-    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-  />
-</div>
 
+        {/* Section droite - 2/3 de la largeur */}
+        <div className="lg:w-2/3 bg-red-700 h-full flex items-center justify-center rounded-lg shadow-md">
+          <img src="../../../public/RECOVER_portfolio-min.gif"></img>
+        </div>
       </div>
     </div>
-  )
+  );
 }

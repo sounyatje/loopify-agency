@@ -2,13 +2,12 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx,ts,tsx}",
+    
   ],
   theme: {
     extend: {
-      colors: {
-        orange: '#FF8C00', // your custom orange color
-      },
+      colors: {},
       fontFamily: {
         'custom': ['MyFont', 'sans-serif'],  
       },
