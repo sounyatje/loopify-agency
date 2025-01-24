@@ -1,0 +1,256 @@
+.resume-page {
+  display: flex;
+  height: 110vh; /* Hauteur égale à celle de l'écran */
+  background-color: #e8cfbc; /* Beige clair */
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Empile les conteneurs */
+    height: auto; /* Ajuste la hauteur automatiquement */
+  }
+}
+
+/* Conteneur gauche */
+.left-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-right: 2px solid #c8814c;
+
+  @media (max-width: 768px) {
+    display: none;
+    border-right: none;
+    border-bottom: 2px solid #c8814c;
+    padding: 10px;
+    min-height: 300px;
+  }
+}
+
+/* Conteneur droit */
+.right-container {
+
+  flex: 1;
+  overflow-y: hidden; /* Supprime la barre de défilement */
+  background-color: #f7f2ec;
+  padding: 10px; /* Réduit le padding */
+  display: flex;
+  flex-direction: column; /* Aligne les compétences verticalement */
+  justify-content: space-between; /* Espace uniforme entre les sections */
+
+  @media (max-width: 768px) {
+    padding: 10px;
+ 
+  }
+}
+
+/* Section compétences */
+.skills-section {
+  flex: 1;
+ margin-top:40px;
+ 
+ gap:10px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 43%;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    height: 30vh;
+    padding: 5px;
+  }
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+  }
+}
+
+.skills-header .icon {
+  font-size: 24px;
+  color: #c8814c;
+  margin-right: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.skills-header h3 {
+  font-size: 18px;
+  color: #c8814c;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    display: flex;
+   flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin-left: 15px;
+    margin-top: px;
+  }
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+  }
+}
+
+.skill-item span {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  color: #d8a884;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.skills-bar {
+  flex: 3;
+  height: 8px;
+  background: #c7c7c7;
+  border-radius: 4px;
+
+  @media (max-width: 768px) {
+    height: 6px;
+  }
+}
+
+.skills-bar .bar {
+  height: 100%;
+  background: #c8814c;
+  border-radius: 4px;
+}
+
+.skills-circles {
+  display: flex;
+  justify-content: center; /* Centre les cercles */
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: "pfTempesta", Arial, sans-serif;
+
+  @media (max-width: 768px) {
+    gap: 0px;
+  }
+}
+
+.circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  font-family: "pfTempesta", Arial, sans-serif;
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+   
+  }
+}
+
+.circle-svg {
+  margin-top: 30px;;
+  width: 140px;
+  height: 140px;
+  transform: rotate(-90deg);
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+ 
+  }
+}
+
+.bg-circle {
+  fill: none;
+  stroke: #d8a884;
+  stroke-width: 8;
+  font-family: "pfTempesta", Arial, sans-serif;
+  @media (max-width: 768px) {
+    stroke-width: 6;
+  }
+}
+
+.progress-circle {
+  fill: none;
+  stroke: #c8814c;
+  stroke-width: 8;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    stroke-width: 6;
+  }
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 35px;
+  margin-left:10px;
+  color:#c8814c;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "pfTempesta", Arial, sans-serif;
+
+  span {
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 9px;
+      
+     
+  
+    }
+  }
+
+  small {
+    font-size: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 8px;
+     
+      
+    }
+  }
+
+}
+
+
+h3{color:#c8814c; }
+
+.hover\:animate-darkGlow:hover {
+  animation: darkGlow 1.5s infinite alternate;
+}
+
+ul{ color:#c8814c;}

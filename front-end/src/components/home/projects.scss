@@ -1,0 +1,150 @@
+body{background-color: #e8cfbc; }
+
+.projects-container {
+    padding: 20px;
+    background-color: #e8cfbc; /* Beige clair */
+    color: #c8814c; /* Beige marron */
+    font-family: Arial, sans-serif;
+    max-width: 1200px; /* Limite la largeur totale du conteneur */
+    margin: 0 auto; /* Centré sur la page */
+    
+    
+  }
+  
+  .projects-title {
+    font-size: 2.5rem;
+    color: #d8a884; /* Beige intermédiaire */
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase; /* Texte en majuscule pour plus de style */
+  }
+  
+  .project-row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin-bottom: 40px;
+    gap: 20px; /* Uniforme entre les éléments */
+    flex-wrap: wrap; /* Permet un retour à la ligne en responsive */
+
+  }
+  
+  .project-row.row-reverse {
+    flex-direction: row-reverse; /* Garde les éléments inversés sur desktop */
+   
+  gap: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column; /* Passe en colonne sur mobile */
+    }
+  }
+  
+  .project-image-container {
+    flex: 1;
+    max-width: 40%; /* Limite la largeur maximale du conteneur d'image */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Léger relief */
+    border: 2px solid #d8a884; /* Ajoute une bordure pour délimiter l'image */
+  }
+  
+  .project-image-container img {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    height: auto;
+    display: block;
+    object-fit: cover; /* Maintient les proportions de l'image */
+  }
+  
+  .project-details {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Blanc pour le contraste */
+    color: #c8814c; /* Texte en beige marron */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    max-width: 50%; /* Réduit la largeur maximale des détails */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+  }
+  
+  .project-details h3 {
+    font-size: 1.5rem;
+    color: #d8a884; /* Beige intermédiaire */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Titre en majuscule */
+    text-align: center; /* Centre les titres */
+  }
+  
+  .project-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .project-details pre {
+    background-color: #f7f2ec; /* Couleur beige clair pour le contraste */
+    color: #c8814c; /* Beige marron */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace; /* Style typewriter */
+  }
+  
+  .tech-stack {
+    font-style: italic;
+    color: #d8a884; /* Beige intermédiaire */
+    margin-bottom: 15px;
+    text-align: center; /* Centre le texte */
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus des boutons */
+    justify-content: center; /* Centre les boutons */
+  }
+  
+  .project-links a {
+    text-decoration: none;
+    color: #ffffff; /* Texte blanc */
+    font-weight: bold;
+    background-color: #c8814c; /* Beige marron */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-links a:hover {
+    background-color: #d8a884; /* Beige intermédiaire au survol */
+    color: #ffffff;
+  }
+  
+  /* Responsive pour petits écrans */
+  @media (max-width: 768px) {
+    .project-row {
+      flex-direction: column; /* Les éléments s'empilent verticalement */
+      align-items: center; /* Centre les éléments */
+      gap: 30px; /* Ajoute plus d'espace entre les éléments */
+    }
+  
+    .project-image-container,
+    .project-details {
+      max-width: 90%; /* Les éléments prennent 90% de la largeur de l'écran */
+      margin: 0 auto; /* Centré horizontalement */
+    }
+  
+    .project-image-container {
+      margin-bottom: 15px; /* Ajoute un espace entre l'image et la description */
+    }
+  
+    .project-details {
+      margin-top: 20px; /* Ajoute un espace entre l'image et les détails */
+    }
+  }
+  
+  h3{font-family: "pfTempesta", Arial, sans-serif;}

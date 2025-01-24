@@ -1,0 +1,80 @@
+$primary: #c8814c; // Orange
+$secondary: #e8cfbc; // Beige clair
+$dark: #3b3b3b; // Gris foncé
+$white: #ffffff;
+$gray: #c7c7c7;
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
+  color: $white;
+  z-index: 9999;
+}
+
+.loading-container {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.pandas {
+  margin-bottom: 20px;
+
+  .panda-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    .panda {
+      width: 50px;
+      height: 50px;
+      background-image: url("/panda-sprite.png"); // Sprite du panda
+      background-size: 300px 50px; // Adaptez à votre sprite
+      animation: panda-walk 1s steps(6) infinite;
+    }
+  }
+}
+
+.loading-bar-wrapper {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.loading-bar {
+  background: $secondary;
+  border: 4px solid $dark;
+  height: 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 0px $gray;
+
+  .progress {
+    background: $primary;
+    height: 100%;
+    transition: width 0.1s linear;
+  }
+}
+
+.loading-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@keyframes panda-walk {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -300px; // Largeur totale du sprite
+  }
+}
+

@@ -1,0 +1,256 @@
+$black: #c8814c;
+$white: #fff;
+$shadow: rgba(0, 0, 0, 0.1);
+
+$px: 4px;
+
+.bubble-right {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  height: 60%; // Correspondant à h-4/5
+  width: 50%; // Correspondant à lg:w-1/2
+  background-color: #e8cfbc; // Beige clair
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px; // Correspondant à p-6
+  border-radius: 8px; // Correspondant à rounded-lg
+  box-shadow: 0 -1*$px $white,
+              0 -2*$px $black,
+              $px 0 $white,
+              $px -1*$px $black,
+              2*$px 0 $black,
+              0 $px $white,
+              0 2*$px $black,
+              -1*$px 0 $white,
+              -1*$px $px $black,
+              -2*$px 0 $black,
+              -1*$px -1*$px $black,
+              $px $px $black;
+              
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: $px;
+    width: $px;
+    top: calc(50% - $px / 2); // Centrage vertical
+    right: -10px; // Position externe à droite
+    background-color: #e8cfbc; // Beige clair
+    box-shadow: 
+      1*$px -1*$px $white,
+      1*$px 0 $white,
+      2*$px 0 $white,
+      0 -2*$px $white,
+      1*$px 1*$px $black, 
+      2*$px 1*$px $black, 
+      3*$px 1*$px $black, 
+      4*$px 1*$px $black,
+      3*$px 0 $black, 
+      2*$px -1*$px $black, 
+      1*$px -2*$px $black,
+      0 -1*$px $white;
+  }
+
+  
+
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .bubble-right {
+    width: 70%; // Réduction pour écrans plus petits
+    left: 15%; // Centrage relatif
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bubble-right {
+    width: 95%; // Prend presque toute la largeur
+    left: 5%; // Centrage relatif
+    max-width: none; // Supprime la limite
+    height:55%;
+  } }
+
+ 
+/* Conteneur parent */
+.relative-container {
+  position: relative; /* Définit un contexte pour les éléments enfants */
+  width: 100%; /* Largeur pleine pour le conteneur */
+  height: 100%; /* Hauteur pleine pour le conteneur */
+  overflow: hidden; /* Empêche les débordements éventuels */
+}
+
+/* GIF animé */
+.animated-gif {
+  position: absolute; /* Positionne le GIF par rapport au conteneur parent */
+  bottom: 20px; /* Position exacte en bas */
+  left: 50%; /* Centre horizontalement */
+  transform: translateX(-50%); /* Ajuste pour centrer précisément */
+  width: 280px; /* Taille pour la version mobile */
+  height: auto; /* Conserve les proportions */
+  z-index: 1000; /* Assure que le GIF est au-dessus des autres éléments */
+}
+
+/* Version mobile */
+@media (max-width: 1024px) {
+  .animated-gif {
+    bottom: 10px; /* Ajuste la position pour mobile */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Maintient le centrage */
+    width: 320px; /* Taille plus grande pour mobile */
+    height: auto; /* Conserve les proportions */
+  }
+}
+
+/* Version desktop */
+@media (min-width: 1025px) {
+  .animated-gif {
+    bottom: 20px; /* Position en bas */
+    right: 20px; /* Position à droite */
+    left: auto; /* Supprime le centrage horizontal */
+    transform: none; /* Désactive le recentrage */
+    width: 480px; /* Taille pour desktop */
+  }
+}
+
+  
+  .bubble-right {
+    /* Initial state */
+    box-shadow: 
+      4px 4px 0px #c7c7c7, /* Ombre grise claire */
+      8px 8px 0px #c8814c, /* Ombre beige marron */
+      -4px -4px 0px #ffffff; /* Lumière blanche pour relief */
+    transition: all 0.2s ease-in-out; /* Transition fluide */
+  }
+  
+  .bubble-right:hover {
+    /* Effet au survol */
+    transform: translate(-4px, -4px); /* Déplacement subtil en pixel */
+    box-shadow: 
+      6px 6px 0px #c7c7c7, 
+      10px 10px 0px #c8814c, 
+      -2px -2px 0px #ffffff;
+  }
+
+  
+  .bg-beigeClair {
+    /* Dégradé linéaire pour l'effet shadow */
+    background: 
+      linear-gradient(
+        135deg,
+        rgba(200, 129, 76, 0.3) 0%,  /* Ombre beige marron */
+        rgba(216, 168, 132, 0.3) 50%, /* Couleur intermédiaire */
+        rgba(232, 207, 188, 0.3) 100% /* Beige clair */
+      );
+  
+    /* Texture rétro avec des lignes horizontales */
+    background-image: 
+      repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        rgba(0, 0, 0, 0.05) 2px,
+        rgba(0, 0, 0, 0.05) 4px
+      );
+  
+    /* Mélange des deux arrière-plans */
+    background-blend-mode: overlay;
+  
+    /* Couvrir toute la zone */
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    /* Ajout de profondeur avec une ombre */
+    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.2),
+                inset 0px -10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  @media (max-width: 1024px) {
+    .bubble-speech-mobile {
+      position: absolute;
+      top: 20%; /* Place la bulle plus haut */
+      left: 50%; /* Centre horizontalement */
+      transform: translateX(-50%);
+      width: 90%; /* Largeur de la bulle */
+      padding: 20px;
+      background-color: #e8cfbc; /* Beige clair */
+      border: 4px solid #c8814c; /* Beige marron */
+      border-radius: 0; /* Supprime les coins arrondis pour un effet pixelisé */
+      box-shadow: 
+        8px 8px 0px #c7c7c7, 
+        -4px -4px 0px #ffffff; /* Effet rétro pixelisé */
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      z-index: 10; /* Met la bulle au-dessus de tous les autres éléments */
+    }
+  
+    /* Pointe de la bulle */
+    .bubble-speech-mobile::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; /* Positionne la pointe juste sous la bulle */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0 20px; /* Triangle orienté vers le bas */
+      border-color: #e8cfbc transparent transparent transparent; /* Couleur de la pointe */
+      z-index: 9; /* Pointe au bon niveau */
+    }
+  
+    /* Ombre de la pointe */
+    .bubble-speech-mobile::before {
+      content: '';
+      position: absolute;
+      bottom: -24px; /* Place l'ombre sous la pointe */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 24px 24px 0 24px; /* Forme triangulaire plus grande pour l'ombre */
+      border-color: #c8814c transparent transparent transparent; /* Couleur de l'ombre */
+      z-index: 8; /* Ombre derrière la pointe */
+    
+    }
+  
+    .title-mobile {
+      font-size: 18px;
+      color: #c8814c;
+      margin-bottom: 10px;
+    }
+  
+    .text-mobile {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+  
+    .button-mobile {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #c8814c;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 0; /* Suppression des coins arrondis */
+      cursor: pointer;
+      box-shadow: 4px 4px 0px #c7c7c7;
+      transition: all 0.3s ease;
+    }
+  
+    .button-mobile:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 8px 8px 0px #c7c7c7;
+    }
+  }
+ 
