@@ -24,7 +24,7 @@ export default function HeroContent() {
   };
 
   return (
-    <div className="bg-beigeClair flex items-center justify-center" style={{ height: "100vh" }}>
+    <div id="accueil" className="bg-beigeClair flex items-center justify-center" style={{ height: "100vh" }}>
       <div className="flex flex-col lg:flex-row w-4/5 h-full gap-8 p-[20px] lg:ml-auto">
         <div className="relative lg:w-full h-full flex items-center justify-center">
           {isMobile ? (

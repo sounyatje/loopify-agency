@@ -120,48 +120,69 @@ const Navbar = () => {
 
         {/* Liens de Navigation */}
         {isOpen && (
-          <div className="flex flex-col space-y-6 absolute top-20 left-6 mt-14">
-            <a
-              href="#accueil"
-              className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"  onMouseEnter={playHoverSound} // Son au hover
-              onClick={playClickSound} // Son au click
-            >
-              {content[language].accueil}
-            </a>
-            <a
-              href="#apropos"
-              className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"  onMouseEnter={playHoverSound} // Son au hover
-              onClick={playClickSound} // Son au click
-            >
-              {content[language].apropos}
-            </a>
-            <ScrollLink
-              to="competences"
-              smooth={true}
-              duration={500}
-              offset={-50} // Ajustez en fonction de la hauteur de votre Navbar
-              className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300 cursor-pointer"
-              onClick={() => {
-                setIsOpen(false); // Fermer le menu après clic
-              }}
-            >
-              {content[language].competences}
-            </ScrollLink>
-            <a
-              href="#travail"
-              className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"  onMouseEnter={playHoverSound} // Son au hover
-              onClick={playClickSound} // Son au click
-            >
-              {content[language].travail}
-            </a>
-            <a
-              href="#contact"
-              className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"  onMouseEnter={playHoverSound} // Son au hover
-              onClick={playClickSound} // Son au click
-            >
-              {content[language].contact}
-            </a>
-          </div>
+         <div className="flex flex-col space-y-6 absolute top-20 left-6 mt-14">
+         <ScrollLink
+           to="accueil"
+           smooth={true}
+           duration={500}
+           offset={-50} // Ajustez en fonction de la hauteur de votre Navbar
+           className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"
+           onMouseEnter={playHoverSound} // Son au hover
+           onClick={playClickSound} // Son au click
+         >
+           {content[language].accueil}
+         </ScrollLink>
+       
+         <ScrollLink
+           to="apropos"
+           smooth={true}
+           duration={500}
+           offset={-50}
+           className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"
+           onMouseEnter={playHoverSound} // Son au hover
+           onClick={playClickSound} // Son au click
+         >
+           {content[language].apropos}
+         </ScrollLink>
+       
+         <ScrollLink
+           to="competences"
+           smooth={true}
+           duration={500}
+           offset={-50} // Ajustez en fonction de la hauteur de votre Navbar
+           className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"
+           onClick={() => {
+             setIsOpen(false); // Fermer le menu après clic
+           }}
+         >
+           {content[language].competences}
+         </ScrollLink>
+       
+         <ScrollLink
+           to="travail"
+           smooth={true}
+           duration={500}
+           offset={-50}
+           className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"
+           onMouseEnter={playHoverSound} // Son au hover
+           onClick={playClickSound} // Son au click
+         >
+           {content[language].travail}
+         </ScrollLink>
+       
+         <ScrollLink
+           to="contact"
+           smooth={true}
+           duration={500}
+           offset={-50}
+           className="text-lg font-pfTempesta font-medium text-white hover:text-beigeClair transition duration-300"
+           onMouseEnter={playHoverSound} // Son au hover
+           onClick={playClickSound} // Son au click
+         >
+           {content[language].contact}
+         </ScrollLink>
+       </div>
+       
         )}
       </nav>
 

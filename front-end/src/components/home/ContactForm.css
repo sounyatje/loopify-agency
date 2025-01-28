@@ -1,2 +1,128 @@
-
+/* ContactForm.css */
+* {
+    box-sizing: border-box;
+  }
   
+  .envelope {
+    width: 700px; /* Augmenter la largeur */
+    height: 400px; /* Augmenter la hauteur */
+    background-color: #9e6a3f;
+    margin: 15% auto; /* Ajuster la marge pour centrer */
+    
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .envelope:before {
+    content: "";
+    top: 0;
+    right: 0;
+    z-index: 3;
+    position: absolute;
+    border-left: 700px solid transparent; /* Augmenter la largeur des bordures */
+    border-bottom: 400px solid #c8814c; /* Augmenter la hauteur des bordures */
+  }
+  
+  .envelope:after {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 3;
+    position: absolute;
+    border-right: 700px solid transparent; /* Augmenter la largeur des bordures */
+    border-bottom: 400px solid #c8814c; /* Augmenter la hauteur des bordures */
+  }
+  
+  .back {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transform-origin: top;
+    border-top: 200px solid #c8814c; /* Augmenter la taille du haut */
+    border-left: 350px solid transparent; /* Ajuster les côtés */
+    border-right: 350px solid transparent; /* Ajuster les côtés */
+    transition: all 1s ease-in-out;
+    transform: rotateX(180deg);
+  }
+  
+  .letter {
+    position: relative;
+    top: 0;
+    padding: 30px 20px; /* Augmenter le padding pour plus d'espace */
+    width: 600px; /* Augmenter la largeur de la lettre */
+    height: 300px; /* Augmenter la hauteur de la lettre */
+    overflow: hidden;
+    z-index: 2;
+    margin: 0 auto;
+    background-color: #F1EBE3;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    transition: all 1s ease-in-out;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+  }
+  
+  label {
+    color: #b3aba1;
+    margin: 0 20px;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #fff;
+    font-size: 16px; /* Augmenter la taille de la police */
+  }
+  
+  input, textarea {
+    width: 90%;
+    height: 45px; /* Augmenter la hauteur des champs */
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    background: none;
+    outline: none;
+    color: #7c7873;
+    border: 1px solid #f8f5f1;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 1px #726959;
+  }
+  
+  textarea {
+    height: 130px; /* Augmenter la hauteur de la zone de texte */
+    max-height: 130px;
+    max-width: 100%;
+    background: repeating-linear-gradient(to bottom, transparent, transparent 20px, #ddd 20px, #ddd 21px);
+    line-height: 20px;
+    margin-bottom: 15px; /* Ajouter de l'espace au bas */
+  }
+  
+  input:focus, textarea:focus {
+    background-color: #F8F4EE;
+  }
+  
+  input[type=submit] {
+    color: #7c7873;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    padding: 12px 20px; /* Agrandir le bouton */
+    font-size: 18px; /* Agrandir la taille de la police du bouton */
+  }
+  
+  input:hover[type=submit] {
+    color: #435c70;
+    background-color: #F8F4EE;
+  }
+  
+  .envelope:hover .back {
+    transform: rotateX(180deg);
+  }
+  
+  .envelope:hover .letter {
+    top: -400px; /* Agrandir l'effet de rotation */
+    height: 600px; /* Agrandir la hauteur de la lettre */
+  }
+  
+  .letter:hover input[type=submit] {
+    z-index: 10;
+    transition: all .5s ease-in-out;
+  }
